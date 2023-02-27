@@ -1,9 +1,13 @@
-
+import { useState } from 'react'
+import { Header } from './components/Header/Header';
 
 const app = () => {
+  const [firstName, setFirstName] = useState('Felipe')
+
   return (
     <div>
-      Teste
+      <Header/>
+      {firstName}
     </div>
   )
 }
