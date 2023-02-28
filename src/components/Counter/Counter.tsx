@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import * as C from './style';
 
 export const Counter = () => {
   const [firstNumber, setFirstNumber] = useState(0)
@@ -14,11 +15,13 @@ export const Counter = () => {
     setFirstNumber(0)
   }
   return (
-    <div>
-      <h1>{firstNumber}</h1>
-      <button onClick={sum}>Adicionar</button>
-      <button onClick={sub}>Diminuir</button>
-      <button onClick={resert}>Reserta</button>
-    </div>
+    <C.Container>
+      <C.ContainerCounter>
+        <h1>{firstNumber}</h1>
+        <C.Button onClick={sum}>Adicionar</C.Button>
+        <C.Button onClick={sub}>Diminuir</C.Button>
+        <C.Button onClick={resert}>Reserta</C.Button>
+      </C.ContainerCounter>
+    </C.Container>
   )
 }

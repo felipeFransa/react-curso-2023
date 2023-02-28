@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { Header } from './components/Header/Header';
 import { Counter } from './components/Counter/Counter';
+import { GlobalContainer } from './styleGlobal'
 
 const app = () => {
   const [firstName, setFirstName] = useState('Felipe')
@@ -10,12 +11,11 @@ const app = () => {
     setLogoName('Novo Logo')
   }
   return (
-    <div>
+    <GlobalContainer>
       <Header title={logoName}/>
       <button onClick={handleClick}>Clique aqui</button>
       <Counter/>
-    </div>
+    </GlobalContainer>
   )
 }
-
 export default app;
