@@ -1,10 +1,16 @@
 import { useState } from 'react';
 import * as C from './style';
 
-export const Header = () => {
+type Props = {
+  title: string
+}
+
+export const Header = ({ title }: Props) => {
   return (
     <C.Container>
-      Teste
+      <h1>
+        {title}
+      </h1>
     </C.Container>
   )
 }

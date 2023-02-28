@@ -3,10 +3,11 @@ import { Header } from './components/Header/Header';
 
 const app = () => {
   const [firstName, setFirstName] = useState('Felipe')
+  const [logoName, setLogoName] = useState('Developers')
 
   return (
     <div>
-      <Header/>
+      <Header title={logoName}/>
       {firstName}
     </div>
   )
