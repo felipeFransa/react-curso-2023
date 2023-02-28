@@ -1,21 +1,22 @@
 import { useState } from 'react'
 import { Header } from './components/Header/Header';
 import { Counter } from './components/Counter/Counter';
-import { GlobalContainer } from './styleGlobal'
+import { Form } from './components/Form/Form';
+import * as GS from './styleGlobal'
 
 const app = () => {
-  const [firstName, setFirstName] = useState('Felipe')
   const [logoName, setLogoName] = useState('Developers')
   
   const handleClick = () => {
     setLogoName('Novo Logo')
   }
   return (
-    <GlobalContainer>
+    <GS.GlobalContainer>
       <Header title={logoName}/>
-      <button onClick={handleClick}>Clique aqui</button>
+      <GS.Button onClick={handleClick}>Clique aqui!</GS.Button>
       <Counter/>
-    </GlobalContainer>
+      <Form/>
+    </GS.GlobalContainer>
   )
 }
 export default app;

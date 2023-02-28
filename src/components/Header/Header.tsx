@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import * as C from './style';
 
 type Props = {
