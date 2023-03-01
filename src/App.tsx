@@ -7,14 +7,13 @@ import * as GS from './styleGlobal'
 const app = () => {
   const [logoName, setLogoName] = useState('Developers')
   
-  const handleClick = () => {
-    setLogoName('Novo Logo')
+  const handleClick = (txt: string) => {
+    setLogoName(txt)
   }
   return (
     <GS.GlobalContainer>
       <Header title={logoName}/>
-      <GS.Button onClick={handleClick}>Clique aqui!</GS.Button>
-      <Counter/>
+      <Counter clickLogo={handleClick} />
       <Form/>
     </GS.GlobalContainer>
   )
