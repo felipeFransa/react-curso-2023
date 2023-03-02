@@ -7,6 +7,7 @@ import * as GS from './styleGlobal'
 
 const app = () => {
   const [logoName, setLogoName] = useState('Developers')
+  const [loading, setLoading] = useState(false)
 
   let people = [
     {name: 'Felipe', age: 26},
@@ -15,6 +16,9 @@ const app = () => {
     {name: 'Antonio', age:45}
   ]
   
+  const hanldeLoading = () => {
+    setLoading(!loading)
+  }
   const handleClick = (txt: string) => {
     setLogoName(txt)
   }
@@ -23,9 +27,10 @@ const app = () => {
       <Header title={logoName}/>
       <Counter clickLogo={handleClick} />
       <Form/>
-      <ul>
-        {people.map((item, index) => (<People key={index} data={item}/>))}
-      </ul>
+      <GS.Button onClick={hanldeLoading}>Carregar!</GS.Button>
+      {loading === true &&
+        <ul>{people.map((item, index) => (<People key={index} data={item}/>))}</ul>}
+      
     </GS.GlobalContainer>
   )
 }
