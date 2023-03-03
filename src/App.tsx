@@ -8,6 +8,7 @@ import * as GS from './styleGlobal'
 const app = () => {
   const [logoName, setLogoName] = useState('Developers')
   const [loading, setLoading] = useState(false)
+  const [containerBG, setContainerBG] = useState(true)
 
   let people = [
     {name: 'Felipe', age: 26},
@@ -22,8 +23,15 @@ const app = () => {
   const handleClick = (txt: string) => {
     setLogoName(txt)
   }
+  const handleContainerBG = () => {
+    setContainerBG(!containerBG)
+  }
+
+
   return (
-    <GS.GlobalContainer>
+    <GS.GlobalContainer bg={containerBG}>
+      <GS.Button onClick={handleContainerBG}>Theme container</GS.Button>
+
       <Header title={logoName}/>
       <Counter clickLogo={handleClick} />
       <Form/>
