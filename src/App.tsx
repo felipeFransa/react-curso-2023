@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { Header } from './components/Header/Header';
 import { Counter } from './components/Counter/Counter';
 import { Form } from './components/Form/Form';
