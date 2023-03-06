@@ -3,6 +3,7 @@ import { Header } from './components/Header/Header';
 import { Counter } from './components/Counter/Counter';
 import { Form } from './components/Form/Form';
 import { People } from './components/People/People';
+import { Movies } from './components/Movies/Movies';
 import * as GS from './styleGlobal'
 
 const app = () => {
@@ -38,6 +39,7 @@ const app = () => {
       <GS.Button onClick={hanldeLoading}>Carregar!</GS.Button>
       {loading === true &&
         <ul>{people.map((item, index) => (<People key={index} data={item}/>))}</ul>}
+      <Movies/>
       
     </GS.GlobalContainer>
   )
