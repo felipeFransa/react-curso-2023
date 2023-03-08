@@ -11,13 +11,11 @@ export const Movies = () => {
     loadMovies();
   },[])
 
-  const loadMovies = () => {
-    fetch(httpFilme).then((response) => {
-      return response.json()
-    })
-    .then((json)=>{
-      setMovies(json);
-    })
+  const loadMovies = async () => {
+    let response = await fetch(httpFilme)
+    let json = await response.json()
+
+    setMovies(json);
   }
 
   return (
