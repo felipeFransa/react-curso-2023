@@ -13,11 +13,16 @@ export const Movies = () => {
   },[])
 
   const loadMovies = async () => {
-    setLoading(true)
-    let response = await fetch(httpFilme)
-    let json = await response.json()
-    setLoading(false)
-    setMovies(json);
+    try {
+      setLoading(true)
+      let response = await fetch(httpFilme)
+      let json = await response.json()
+      setLoading(false)
+      setMovies(json);
+    } catch(error) {
+      alert('Erro tente mais tarde!')
+      console.log(error)
+    }
   }
 
   return (
