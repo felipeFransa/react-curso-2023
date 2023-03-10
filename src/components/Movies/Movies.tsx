@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { Movie } from '../../types/moviesTypes';
+import { Movie } from '../../types/types';
 import * as C from './style';
 
 const httpFilme = 'https://api.b7web.com.br/cinema/'

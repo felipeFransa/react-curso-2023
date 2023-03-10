@@ -4,6 +4,7 @@ import { Counter } from './components/Counter/Counter';
 import { Form } from './components/Form/Form';
 import { People } from './components/People/People';
 import { Movies } from './components/Movies/Movies';
+import { JsonTest } from './components/jsonTest/jsonTest';
 import * as GS from './styleGlobal'
 
 const app = () => {
@@ -40,6 +41,8 @@ const app = () => {
       {loading === true &&
         <ul>{people.map((item, index) => (<People key={index} data={item}/>))}</ul>}
       <Movies/>
+      <JsonTest/>
+
       
     </GS.GlobalContainer>
   )
