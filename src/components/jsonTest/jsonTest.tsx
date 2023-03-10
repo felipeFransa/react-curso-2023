@@ -25,11 +25,15 @@ export const JsonTest = () => {
 
   return (
     <div>
-      {posts.map((item, index) =>(
+      {!loading &&
         <div>
-          {item.title}
+          {posts.map((item, index) =>(
+            <div>
+            {item.title}
+            </div>
+            ))} 
         </div>
-      ))}
+      }
     </div>
   )
 }
