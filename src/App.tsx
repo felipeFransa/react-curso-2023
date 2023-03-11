@@ -5,6 +5,7 @@ import { Form } from './components/Form/Form';
 import { People } from './components/People/People';
 import { Movies } from './components/Movies/Movies';
 import { JsonTest } from './components/jsonTest/jsonTest';
+import { Pokemon } from './components/Pokemon/pokemon';
 import * as GS from './styleGlobal'
 
 const app = () => {
@@ -42,6 +43,7 @@ const app = () => {
         <ul>{people.map((item, index) => (<People key={index} data={item}/>))}</ul>}
       <Movies/>
       <JsonTest/>
+      <Pokemon/>
 
       
     </GS.GlobalContainer>

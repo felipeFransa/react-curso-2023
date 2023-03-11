@@ -9,3 +9,9 @@ export type Posts = {
   title: string;
   body: string;
 }
+export type PokemonTypes = {
+  count: number
+  next: null,
+  previous: null,
+  results: []
+}
