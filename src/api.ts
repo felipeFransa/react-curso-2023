@@ -1,9 +1,10 @@
-const httpBaseJsonTest = 'https://jsonplaceholder.typicode.com/posts'
+import axios from "axios"
+
+const httpBaseJsonTest = 'https://jsonplaceholder.typicode.com'
 
 export const api = {
   getAllPosts: async () => {
-    let response = await fetch(httpBaseJsonTest)
-    let json = await response.json()
-    return json;
+    let response = await axios.get(`${httpBaseJsonTest}/posts`);
+    return response.data;
   },
 }
