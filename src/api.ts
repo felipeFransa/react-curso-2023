@@ -1,10 +1,14 @@
 import axios from "axios"
 
-const httpBaseJsonTest = 'https://jsonplaceholder.typicode.com'
+const http = axios.create({
+  baseURL: 'https://jsonplaceholder.typicode.com',
+  timeout: 1000,
+  headers: {'X-Custom-Header': 'foobar'}
+});
 
 export const api = {
   getAllPosts: async () => {
-    let response = await axios.get(`${httpBaseJsonTest}/posts`);
+    let response = await http.get('/posts')
     return response.data;
   },
 }
