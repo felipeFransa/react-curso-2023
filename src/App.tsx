@@ -43,7 +43,7 @@ const app = () => {
         <ul>{people.map((item, index) => (<People key={index} data={item}/>))}</ul>}
       <Movies/>
       <JsonTest/>
-      <Pokemon/>
+      {/* <Pokemon/> */}
 
       
     </GS.GlobalContainer>

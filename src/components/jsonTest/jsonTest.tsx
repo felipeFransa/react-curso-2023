@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
+import { api } from '../../api';
 import { Posts } from '../../types/types';
 
-const httpBaseJsonTest = 'https://jsonplaceholder.typicode.com/posts'
 
 export const JsonTest = () => {
   const [loading, setLoading] = useState(false);
@@ -14,8 +14,7 @@ export const JsonTest = () => {
   const loadingPosts = async () => {
   try {
     setLoading(true)
-    let response = await fetch(httpBaseJsonTest)
-    let json = await response.json()
+    let json = await api.getAllPosts()
     setLoading(false)
     setPosts(json)
   }catch(err) {
